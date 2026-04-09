@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COINVERSE SMP Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <h1>COINVERSE SMP Admin</h1>
+      <button id="refreshBtn">Refresh</button>
+    </header>
+
+    <section class="panel">
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Coins</th>
+            <th>Job</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="playersBody"></tbody>
+      </table>
+      <p id="statusText">Loading players...</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
