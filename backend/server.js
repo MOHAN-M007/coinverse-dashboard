@@ -10,7 +10,12 @@ const API_KEY = process.env.API_KEY || "12341";
 const DATA_DIR = path.join(__dirname, "data");
 const PLAYERS_FILE = path.join(DATA_DIR, "players.json");
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "x-api-key"]
+}));
+app.options("*", cors());
 app.use(express.json({ limit: "1mb" }));
 
 function ensureDataFile() {
